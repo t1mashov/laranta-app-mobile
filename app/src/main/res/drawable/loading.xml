@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+
+    <aapt:attr name="android:drawable">
+        <vector
+            android:width="8dp"
+            android:height="6dp"
+            android:viewportWidth="84"
+            android:viewportHeight="66">
+            <path android:name="anim_path"
+                android:fillColor="#00000000"
+                android:strokeWidth="5"
+                android:strokeLineCap="round"
+                android:strokeLineJoin="round"
+                android:strokeColor="#56f"
+                android:trimPathOffset="0.2"
+                android:pathData="
+M 6,61
+L 75.75,61
+C 69.75,44.25 70.75,31.25 72.75,15.75
+C 73.25,11.75 71,12 69.5,12.5
+C 72.5,8 67.5,6 64.5,9.5
+C 60.5,9 60.75,5.75 59.25,5.5
+C 55.5,14.25 68.75,35.75 21.5,30.5
+C 25.25,13.25 5.5,18 15,36.25
+C 14,44.75 10.5,56.5 6,61
+Z
+
+"
+                />
+        </vector>
+    </aapt:attr>
+
+    <target
+        android:name="anim_path">
+        <aapt:attr name="android:animation">
+            <set xmlns:android="http://schemas.android.com/apk/res/android"
+                android:ordering="together">
+                <objectAnimator
+                    android:repeatCount="infinite"
+                    android:repeatMode="restart"
+                    android:duration="1000"
+                    android:propertyName="trimPathStart"
+                    android:valueFrom="0"
+                    android:valueTo="1"
+                    android:valueType="floatType"
+                    android:interpolator="@android:interpolator/linear"
+                    />
+                <objectAnimator
+                    android:repeatCount="infinite"
+                    android:repeatMode="restart"
+                    android:duration="1000"
+                    android:propertyName="trimPathEnd"
+                    android:valueFrom="0.3"
+                    android:valueTo="1.3"
+                    android:valueType="floatType"
+                    android:interpolator="@android:interpolator/linear"
+                    />
+            </set>
+        </aapt:attr>
+    </target>
+
+
+</animated-vector>
